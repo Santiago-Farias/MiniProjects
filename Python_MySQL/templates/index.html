@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión entre Python y MySQL</title>
+</head>
+
+<body>
+    <h1>Lista de clientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>id_cliente</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>fecha_nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente[0] }}</td> <!-- id_cliente -->
+                <td>{{ cliente[1] }}</td> <!-- nombre -->
+                <td>{{ cliente[2] }}</td> <!-- apellido -->
+                <td>{{ cliente[3] }}</td> <!-- fecha_nacimiento -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
